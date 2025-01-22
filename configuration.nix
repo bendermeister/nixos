@@ -60,8 +60,8 @@
   environment.systemPackages = with pkgs; [
     neovim 
     wget
-    librewolf-bin
     git
+    librewolf-bin
     dmenu
     (st.overrideAttrs (oldAttrs: rec {
       src = /home/ben/Repo/st;
