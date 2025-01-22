@@ -20,6 +20,12 @@
         extraGroups = [ "wheel" ]; 
     };
 
+    fonts.packages = with pkgs; [
+        noto-fonts
+        noto-fonts-emoji
+        noto-fonts-extra
+    ];
+
     security.sudo = {
         enable = true;
         wheelNeedsPassword = false;
@@ -39,6 +45,10 @@
             layout = "us";
             options = "caps:swapescape";
         };
+    };
+
+    programs.steam = {
+        enable = true;
     };
 
     # Sound
@@ -64,16 +74,19 @@
 
     environment.systemPackages = with pkgs; [
         neovim 
+        sqlite
         wget
         git
         home-manager
         nodejs
+        xclip
         openvpn
         fastfetch
         dmenu
         librewolf
         discord
         openssh
+        gcc
         (st.overrideAttrs (oldAttrs: {
             src = ./st;
         }))
@@ -84,8 +97,14 @@
         gnumake
         gopls
         rust-analyzer
+        xclip
+        ksnip
         lua-language-server
+        sqlc
+        go
         nixd
+        rnote
+        signal-desktop
     ];
 
 
