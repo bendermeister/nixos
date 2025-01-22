@@ -7,7 +7,6 @@
 
     outputs = { self, nixpkgs, ... }: {
         nixosConfigurations.bigbox = nixpkgs.lib.nixosSystem {
-            allowUnfree = true;
             system = "x86_64-linux";
             modules = [
                 ./configuration.nix

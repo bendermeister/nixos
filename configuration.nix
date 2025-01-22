@@ -10,6 +10,11 @@
         systemd-boot.enable = true;
     };
 
+    nixpkgs.config.allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+            "discord-ptb"
+        ];
+
     # General System Configuration
     networking.hostName = "bigbox";
     time.timeZone = "Europe/Vienna";
@@ -74,7 +79,6 @@
             src = ./st;
         }))
         tree-sitter
-        discord-ptb
         eza
         clang
         cargo
