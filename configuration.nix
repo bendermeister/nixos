@@ -34,7 +34,7 @@
         windowManager.dwm = {
             enable = true;
             package = pkgs.dwm.overrideAttrs {
-                src = /home/ben/Repo/dwm;
+                src = ./dwm;
             };
         };
         xkb = {
@@ -71,7 +71,7 @@
         librewolf
         dmenu
         (st.overrideAttrs (oldAttrs: {
-            src = /home/ben/Repo/st;
+            src = ./st;
         }))
         tree-sitter
         discord
