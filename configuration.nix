@@ -18,6 +18,14 @@
         font = "Lat2-Terminus16";
         useXkbConfig = true; 
     };
+    users.users.ben = {
+        isNormalUser = true;
+        extraGroups = [ "wheel" ]; 
+    };
+    security.sudo = {
+        enable = true;
+        wheelNeedsPassword = false;
+    };
 
     # Xorg config
     services.xserver = {
@@ -35,25 +43,14 @@
         };
     };
 
-
     # Sound
     services.pipewire = {
         enable = true;
         pulse.enable = true;
     };
 
-    users.users.ben = {
-        isNormalUser = true;
-        extraGroups = [ "wheel" ]; 
-    };
-
-    security.sudo = {
-        enable = true;
-        wheelNeedsPassword = false;
-    };
-
     environment = {
-        variables = rec {
+        variables =  {
             EDITOR = "nvim";
         };
         interactiveShellInit = ''
@@ -69,10 +66,11 @@
         neovim 
         wget
         git
+        nodejs
         fastfetch
-        librewolf-bin
+        librewolf
         dmenu
-        (st.overrideAttrs (oldAttrs: rec {
+        (st.overrideAttrs (oldAttrs: {
             src = /home/ben/Repo/st;
         }))
         tree-sitter
