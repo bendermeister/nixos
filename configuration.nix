@@ -74,7 +74,7 @@
             src = ./st;
         }))
         tree-sitter
-        discord
+        discord-ptb
         eza
         clang
         cargo
