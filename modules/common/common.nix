@@ -47,6 +47,11 @@
         pulse.enable = true;
     };
 
+    programs.gnupg.agent = {
+        enable = true;
+        enableSSHSupport = true;
+    };
+
     environment = {
         variables =  {
             EDITOR = "nvim";
@@ -63,10 +68,12 @@
         git
         home-manager
         nodejs
+        openvpn
         fastfetch
         dmenu
         librewolf
         discord
+        openssh
         (st.overrideAttrs (oldAttrs: {
             src = ./st;
         }))
