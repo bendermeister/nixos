@@ -68,6 +68,7 @@
         neovim 
         wget
         git
+        home-manager
         discord
         nodejs
         fastfetch
