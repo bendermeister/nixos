@@ -74,6 +74,7 @@
             src = /home/ben/Repo/st;
         }))
         tree-sitter
+        discord
         eza
         clang
         cargo
