@@ -10,10 +10,7 @@
         systemd-boot.enable = true;
     };
 
-    nixpkgs.config.allowUnfreePredicate = pkg:
-        builtins.elem (lib.getName pkg) [
-            "discord-ptb"
-        ];
+    nixpkgs.config.allowUnfree = true;
 
     # General System Configuration
     networking.hostName = "bigbox";
@@ -71,6 +68,7 @@
         neovim 
         wget
         git
+        discord
         nodejs
         fastfetch
         librewolf
