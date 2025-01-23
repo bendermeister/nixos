@@ -96,8 +96,8 @@
         xclip
         spotify
         gopls
-        cargo
         rust-analyzer
+        cargo
         xclip
         ksnip
         lua-language-server

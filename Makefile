@@ -1,4 +1,4 @@
-switch: test
+switch:
 	nixos-rebuild switch --flake .
 test:
 	nixos-rebuild test --flake .
