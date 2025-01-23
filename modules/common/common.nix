@@ -47,14 +47,14 @@
         };
     };
 
-    programs.steam = {
-        enable = true;
-    };
-
     # Sound
     services.pipewire = {
         enable = true;
         pulse.enable = true;
+    };
+
+    programs.steam = {
+        enable = true;
     };
 
     programs.gnupg.agent = {
@@ -74,7 +74,7 @@
 
     environment.systemPackages = with pkgs; [
         neovim 
-        sqlite
+        pulsemixer
         wget
         git
         home-manager
@@ -86,22 +86,22 @@
         librewolf
         discord
         openssh
-        gcc
         (st.overrideAttrs (oldAttrs: {
             src = ./st;
         }))
         tree-sitter
         eza
         clang
-        cargo
         gnumake
+        xclip
+        spotify
         gopls
+        cargo
         rust-analyzer
         xclip
         ksnip
         lua-language-server
-        sqlc
-        go
+        gopls
         nixd
         rnote
         signal-desktop
