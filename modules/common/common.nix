@@ -38,7 +38,7 @@
         windowManager.dwm = {
             enable = true;
             package = pkgs.dwm.overrideAttrs {
-                src = ./dwm;
+                src = ../../source/dwm;
             };
         };
         xkb = {
@@ -64,7 +64,7 @@
 
     environment = {
         variables =  {
-            EDITOR = "nvim";
+            #EDITOR = "nvim";
         };
         interactiveShellInit = ''
             alias ls='eza -l'
@@ -78,7 +78,6 @@
         wget
         git
         home-manager
-        nodejs
         xclip
         openvpn
         fastfetch
@@ -87,7 +86,7 @@
         discord
         openssh
         (st.overrideAttrs (oldAttrs: {
-            src = ./st;
+            src = ../../source/st;
         }))
         tree-sitter
         eza
