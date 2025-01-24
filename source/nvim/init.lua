@@ -124,7 +124,7 @@ require("table-nvim").setup {}
 
 --TreeSitter--------------------------------------------------------------------
 require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "yaml", "ledger", "rust", "markdown", "lua", "sql", "markdown_inline", "go", "latex", "toml", "html", "javascript", "nix" },
+    ensure_installed = {},
     sync_install = false, -- disable synchroise download of parsers
     auto_install = false, -- don't do anything without my permission
     ignore_install = {},
