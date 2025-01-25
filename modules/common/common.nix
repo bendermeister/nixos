@@ -90,6 +90,9 @@
         (st.overrideAttrs (oldAttrs: {
             src = ../../source/st;
         }))
+        (dwmblocks.overrideAttrs (oldAttrs: {
+            src = ../../source/dwmblocks;
+        }))
         tree-sitter
         eza
         clang
