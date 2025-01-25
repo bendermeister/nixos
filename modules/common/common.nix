@@ -95,6 +95,7 @@
         clang
         gnumake
         xclip
+        phinger-cursors
         spotify
         gopls
         rust-analyzer

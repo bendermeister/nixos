@@ -26,7 +26,7 @@
                 p.tree-sitter-javascript
                 p.tree-sitter-nix
             ]))
-            plenary # required by telescope
+            plenary-nvim # required by telescope
             telescope-nvim
             oil-nvim
             vim-floaterm
