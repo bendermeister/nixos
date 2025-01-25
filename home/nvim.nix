@@ -26,7 +26,8 @@
                 p.tree-sitter-javascript
                 p.tree-sitter-nix
             ]))
-            telescope-nvim # do we need to install plenary separetly?
+            plenary # required by telescope
+            telescope-nvim
             oil-nvim
             vim-floaterm
             gitsigns-nvim

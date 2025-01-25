@@ -41,6 +41,11 @@
                 src = ../../source/dwm;
             };
         };
+        desktopManager = {
+            xterm.enable = false;
+            wallpaper.mode = "fill";
+        };
+        excludePackages = [ pkgs.xterm ]; 
         xkb = {
             layout = "us";
             options = "caps:swapescape";
@@ -63,9 +68,6 @@
     };
 
     environment = {
-        variables =  {
-            #EDITOR = "nvim";
-        };
         interactiveShellInit = ''
             alias ls='eza -l'
             alias ll='eza -la'
