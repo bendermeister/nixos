@@ -38,6 +38,7 @@
             gdm.enable = true;
             sessionCommands = ''
                 slstatus &
+                xrandr --output HDMI-1 --mode 1920x1080 --left-of DP-1 --output DP-1 --mode 1920x1080 -r 239.96 &
             '';
         };
         windowManager.dwm = {
