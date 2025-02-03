@@ -12,10 +12,22 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char *colors[][3]      = {
+
+static const char base_dawn[] = "#fffaf3";
+static const char text_dawn[] = "#575279";
+
+static const char sel_base_dawn[] = "#eb6f92";
+static const char sel_text_dawn[] = "#faf4ed";
+
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+/* static const char *colors[][3]      = { */
+/* 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, */
+/* 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  }, */
+/* }; */
+
+static const char *colors[][3]      = {
+	[SchemeNorm] = { text_dawn, base_dawn, base_dawn },
+	[SchemeSel]  = { sel_text_dawn, sel_base_dawn,  sel_base_dawn  },
 };
 
 /* tagging */

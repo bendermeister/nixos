@@ -34,7 +34,12 @@
     # Xorg config
     services.xserver = {
         enable = true;
-        displayManager.gdm.enable = true;
+        displayManager = {
+            gdm.enable = true;
+            sessionCommands = ''
+                slstatus &
+            '';
+        };
         windowManager.dwm = {
             enable = true;
             package = pkgs.dwm.overrideAttrs {
@@ -90,25 +95,24 @@
         (st.overrideAttrs (oldAttrs: {
             src = ../../source/st;
         }))
-        (dwmblocks.overrideAttrs (oldAttrs: {
-            src = ../../source/dwmblocks;
+        (slstatus.overrideAttrs (oldAttrs: {
+            src = ../../source/slstatus;
         }))
         tree-sitter
         eza
         clang
         gnumake
         xclip
-        phinger-cursors
         spotify
-        gopls
-        rust-analyzer
-        xclip
         ksnip
         lua-language-server
-        gopls
         nixd
         rnote
         signal-desktop
+        mpv
+
+        obs-studio
+        audacity
     ];
 
 

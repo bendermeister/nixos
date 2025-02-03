@@ -154,6 +154,7 @@ lspconfig.rust_analyzer.setup {}
 lspconfig.lua_ls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.nixd.setup {}
+lspconfig.ts_ls.setup{}
 
 --GitSigns---------------------------------------------------------------------
 require("gitsigns").setup {}
@@ -207,7 +208,7 @@ map("t", "<ESC>", "<C-\\><C-n>")
 map("n", "<leader>tt", ":FloatermToggle<CR>")
 
 --Files
-map("n", "<leader>.", telescope.find_files)
+map("n", "<leader>.", ":Oil<CR>")
 map("n", "<leader>pf", telescope.git_files)
 
 --Comment
@@ -228,3 +229,6 @@ map("n", "gd", vim.lsp.buf.definition)
 -- Move lines Up and Down
 map("v", "K", ":m '<-2<CR>gv=gv") -- move line up(v)
 map("v", "J", ":m '>+1<CR>gv=gv") -- move line down(v)
+
+
+-- Lsp
