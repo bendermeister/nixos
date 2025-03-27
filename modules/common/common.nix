@@ -99,6 +99,12 @@
         (slstatus.overrideAttrs (oldAttrs: {
             src = ../../source/slstatus;
         }))
+        lldb
+        oversteer
+        jetbrains.idea-community
+        typst
+        libreoffice
+        chromium
         tree-sitter
         eza
         clang
@@ -111,9 +117,12 @@
         rnote
         signal-desktop
         mpv
+        feh
+        python3
+        vscode-extensions.vadimcn.vscode-lldb
 
-        obs-studio
-        audacity
+        foliate
+        htop
     ];
 
 

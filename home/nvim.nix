@@ -25,10 +25,12 @@
                 p.tree-sitter-html
                 p.tree-sitter-javascript
                 p.tree-sitter-nix
+                p.tree-sitter-typst
             ]))
             plenary-nvim # required by telescope
             telescope-nvim
             oil-nvim
+            rustaceanvim
             vim-floaterm
             gitsigns-nvim
             nvim-lspconfig
@@ -37,6 +39,7 @@
 
             cmp-nvim-lsp
             cmp-buffer
+            nvim-dap
             cmp-path
             nvim-cmp
         ];

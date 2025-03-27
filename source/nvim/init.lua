@@ -31,6 +31,10 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 1
 
 
+vim.diagnostic.config({
+    virtual_text = false
+})
+
 --Theme------------------------------------------------------------------------
 -- RosePine colorscheme
 require("rose-pine").setup({
@@ -136,6 +140,9 @@ require 'nvim-treesitter.configs'.setup {
     }
 }
 
+--Dap--------------------------------------------------------------------------
+local dap = require("dap")
+
 --Telescope--------------------------------------------------------------------
 require("telescope").setup {}
 
@@ -155,6 +162,13 @@ lspconfig.lua_ls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.nixd.setup {}
 lspconfig.ts_ls.setup{}
+lspconfig.volar.setup{
+    init_options = {
+        vue = {
+            hybrid = false,
+        },
+    }
+}
 
 --GitSigns---------------------------------------------------------------------
 require("gitsigns").setup {}
@@ -219,12 +233,13 @@ map("v", "<leader>cc", ":CommentToggle<CR>")
 --map("n", "<leader>gs", neogit.open({"commit"}))
 
 --LspNavigation
-map("n", "lrr", vim.lsp.buf.references)
-map("n", "lrn", vim.lsp.buf.rename)
-map("n", "lra", vim.lsp.buf.code_action)
-map("n", "lrf", vim.lsp.buf.format)
+map("n", "<leader>lrn", vim.lsp.buf.rename)
+map("n", "<leader>lra", vim.lsp.buf.code_action)
+map("n", "<leader>lrf", vim.lsp.buf.format)
 map("n", "K", vim.lsp.buf.hover)
+map("n", "grr", vim.lsp.buf.references)
 map("n", "gd", vim.lsp.buf.definition)
+map("n", "E", vim.diagnostic.open_float)
 
 -- Move lines Up and Down
 map("v", "K", ":m '<-2<CR>gv=gv") -- move line up(v)
